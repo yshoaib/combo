@@ -59,7 +59,7 @@ module Combo
     end
 
     def peak
-      @card[@cards.count -1]
+      @cards.last
     end
   end
 end

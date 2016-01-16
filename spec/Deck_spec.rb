@@ -51,4 +51,11 @@ describe Combo::Deck do
     deck.remove!
     expect(deck.cards.count).to eq (51)
   end
+
+  it "should have peak method working" do
+    deck = Combo::Deck.new
+    card = deck.peak
+    removed_card = deck.remove!
+    expect(card).to eq(removed_card) 
+  end
 end
