@@ -1,5 +1,7 @@
 module Combo
   class Deck
+    attr_reader :cards
+
     RANKS = %i(
       Ace
       Two
@@ -42,6 +44,22 @@ module Combo
 
     def to_a
       @cards
+    end
+
+    def shuffle!
+      @cards.shuffle!
+    end
+
+    def empty?
+      @cards.count == 0
+    end
+
+    def remove!
+      @cards.pop
+    end
+
+    def peak
+      @card[@cards.count -1]
     end
   end
 end
